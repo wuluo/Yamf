@@ -40,8 +40,6 @@ class __TwigTemplate_6d32dff22823338fb95304d26a28657ec412be52e0a5fedc2c0213dff74
   <!-- Main content -->
   <section class=\"content\">
     <div class=\"box box-primary\">
-      <div class=\"box-header\">     
-      </div>
       <div class=\"box-body\">
         <div class=\"col-md-4\">
           <a class=\"btn btn-success btn-flat\" href=\"/admin/blog/save\">
@@ -151,8 +149,6 @@ class __TwigTemplate_6d32dff22823338fb95304d26a28657ec412be52e0a5fedc2c0213dff74
   <!-- Main content -->
   <section class=\"content\">
     <div class=\"box box-primary\">
-      <div class=\"box-header\">     
-      </div>
       <div class=\"box-body\">
         <div class=\"col-md-4\">
           <a class=\"btn btn-success btn-flat\" href=\"/admin/blog/save\">

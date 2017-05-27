@@ -26,7 +26,7 @@
       </ul>
       <div class="tab-content">
         <div class="tab-pane active" id="tab_1">
-          <table id="table1" class="table table-bordered table-hover text-center ">
+          <table id="example1" class="table table-bordered table-hover text-center ">
             <thead>
             <tr class="gradeX">
               <th>ID</th>
@@ -34,38 +34,35 @@
               <th>URL</th>
               <th>上级菜单</th>
               <th>状态</th>
+              <th>创建时间</th>
               <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            {% for menu in menus %}
             <tr align="center">
-              <td>{{ menu.id }}</td>
-              <td>{{ menu.name }}</td>
-              <td>{{ menu.uri }}</td>
-              <th>{{ menu.parent_name }}</th>
-              <th>{% if menu.status == 1 %}启用{% else %}禁用{% endif %}</th>
+              <td>1</td>
+              <td>热门推荐</td>
+              <td>http://blog.wjlike.com</td>
+              <th> -- </th>
+              <th>启用</th>
+              <td>2017-04-25 10:25:13</td>
               <td>
-                <a class="btn btn-xs btn-success btn-flat" href="/admin/menu/save?id={{ menu.id }}">
+                <a class="btn btn-xs btn-success btn-flat" href="/admin/blog/save?id=1">
                   <i class="fa fa-edit"></i> 编辑
                 </a>&nbsp;&nbsp;
-                {% if menu.status == 1 %}
-                <a class="btn btn-xs bg-orange btn-flat" href="/admin/menu/off?id={{ menu.id }}">
+                <a class="btn btn-xs bg-maroon btn-flat" href="/admin/blog/info?id=1">
+                  <i class="fa fa-check"></i> 启用
+                </a>&nbsp;&nbsp;
+                <a class="btn btn-xs bg-orange btn-flat" href="/admin/blog/info?id=1">
                   <i class="fa fa-close"></i> 禁用
                 </a>
-                {% else %}禁用
-                <a class="btn btn-xs bg-maroon btn-flat" href="/admin/menu/on?id={{ menu.id }}">
-                  <i class="fa fa-check"></i> 启用
-                </a>
-                {% endif %}
               </td>
             </tr>
-            {% endfor %}
             </tbody>
           </table>
         </div>
         <div class="tab-pane" id="tab_2">
-          <table id="table2" class="table table-bordered table-hover text-center ">
+          <table id="example1" class="table table-bordered table-hover text-center ">
             <thead>
             <tr class="gradeX">
               <th>ID</th>
@@ -74,34 +71,31 @@
               <th>URL</th>
               <th>上级菜单</th>
               <th>状态</th>
+              <th>创建时间</th>
               <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            {% for menu in amenus %}
             <tr align="center">
-              <td>{{ menu.id }}</td>
-              <td>{{ menu.name }}</td>
-              <td>{{ menu.icon }}</td>
-              <td>{{ menu.uri }}</td>
-              <th>{{ menu.parent_name }}</th>
-              <th>{% if menu.status == 1 %}启用{% else %}禁用{% endif %}</th>
+              <td>1</td>
+              <td>热门推荐</td>
+              <td>fa-circle-o</td>
+              <td>http://blog.wjlike.com</td>
+              <th> -- </th>
+              <th>启用</th>
+              <td>2017-04-25 10:25:13</td>
               <td>
-                <a class="btn btn-xs btn-success btn-flat" href="/admin/menu/save?id={{ menu.id }}">
+                <a class="btn btn-xs btn-success btn-flat" href="/admin/blog/save?id=1">
                   <i class="fa fa-edit"></i> 编辑
                 </a>&nbsp;&nbsp;
-                {% if menu.status == 1 %}
-                <a class="btn btn-xs bg-orange btn-flat" href="/admin/menu/off?id={{ menu.id }}">
+                <a class="btn btn-xs bg-maroon btn-flat" href="/admin/blog/info?id=1">
+                  <i class="fa fa-check"></i> 启用
+                </a>&nbsp;&nbsp;
+                <a class="btn btn-xs bg-orange btn-flat" href="/admin/blog/info?id=1">
                   <i class="fa fa-close"></i> 禁用
                 </a>
-                {% else %}禁用
-                <a class="btn btn-xs bg-maroon btn-flat" href="/admin/menu/on?id={{ menu.id }}">
-                  <i class="fa fa-check"></i> 启用
-                </a>
-                {% endif %}
               </td>
             </tr>
-            {% endfor %}
             </tbody>
           </table>
         </div>

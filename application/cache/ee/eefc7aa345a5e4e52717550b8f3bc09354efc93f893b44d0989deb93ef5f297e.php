@@ -54,7 +54,7 @@ class __TwigTemplate_99851bd76d026c7dec7176ab4e405a31c6ad3ef5288c1c3d0a8b950d264
       </ul>
       <div class=\"tab-content\">
         <div class=\"tab-pane active\" id=\"tab_1\">
-          <table id=\"example1\" class=\"table table-bordered table-hover text-center \">
+          <table id=\"table1\" class=\"table table-bordered table-hover text-center \">
             <thead>
             <tr class=\"gradeX\">
               <th>ID</th>
@@ -62,35 +62,83 @@ class __TwigTemplate_99851bd76d026c7dec7176ab4e405a31c6ad3ef5288c1c3d0a8b950d264
               <th>URL</th>
               <th>上级菜单</th>
               <th>状态</th>
-              <th>创建时间</th>
               <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            <tr align=\"center\">
-              <td>1</td>
-              <td>热门推荐</td>
-              <td>http://blog.wjlike.com</td>
-              <th> -- </th>
-              <th>启用</th>
-              <td>2017-04-25 10:25:13</td>
+            ";
+        // line 41
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["menus"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["menu"]) {
+            // line 42
+            echo "            <tr align=\"center\">
+              <td>";
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "name", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "uri", array()), "html", null, true);
+            echo "</td>
+              <th>";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "parent_name", array()), "html", null, true);
+            echo "</th>
+              <th>";
+            // line 47
+            if ((twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "status", array()) == 1)) {
+                echo "启用";
+            } else {
+                echo "禁用";
+            }
+            echo "</th>
               <td>
-                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/blog/save?id=1\">
+                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/menu/save?id=";
+            // line 49
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+            echo "\">
                   <i class=\"fa fa-edit\"></i> 编辑
                 </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/blog/info?id=1\">
-                  <i class=\"fa fa-check\"></i> 启用
-                </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/blog/info?id=1\">
+                ";
+            // line 52
+            if ((twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "status", array()) == 1)) {
+                // line 53
+                echo "                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/menu/off?id=";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+                echo "\">
                   <i class=\"fa fa-close\"></i> 禁用
                 </a>
-              </td>
+                ";
+            } else {
+                // line 56
+                echo "禁用
+                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/menu/on?id=";
+                // line 57
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+                echo "\">
+                  <i class=\"fa fa-check\"></i> 启用
+                </a>
+                ";
+            }
+            // line 61
+            echo "              </td>
             </tr>
-            </tbody>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['menu'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 64
+        echo "            </tbody>
           </table>
         </div>
         <div class=\"tab-pane\" id=\"tab_2\">
-          <table id=\"example1\" class=\"table table-bordered table-hover text-center \">
+          <table id=\"table2\" class=\"table table-bordered table-hover text-center \">
             <thead>
             <tr class=\"gradeX\">
               <th>ID</th>
@@ -99,32 +147,83 @@ class __TwigTemplate_99851bd76d026c7dec7176ab4e405a31c6ad3ef5288c1c3d0a8b950d264
               <th>URL</th>
               <th>上级菜单</th>
               <th>状态</th>
-              <th>创建时间</th>
               <th>操作</th>
             </tr>
             </thead>
             <tbody>
-            <tr align=\"center\">
-              <td>1</td>
-              <td>热门推荐</td>
-              <td>fa-circle-o</td>
-              <td>http://blog.wjlike.com</td>
-              <th> -- </th>
-              <th>启用</th>
-              <td>2017-04-25 10:25:13</td>
+            ";
+        // line 81
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["amenus"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["menu"]) {
+            // line 82
+            echo "            <tr align=\"center\">
+              <td>";
+            // line 83
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 84
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "name", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 85
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "icon", array()), "html", null, true);
+            echo "</td>
+              <td>";
+            // line 86
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "uri", array()), "html", null, true);
+            echo "</td>
+              <th>";
+            // line 87
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "parent_name", array()), "html", null, true);
+            echo "</th>
+              <th>";
+            // line 88
+            if ((twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "status", array()) == 1)) {
+                echo "启用";
+            } else {
+                echo "禁用";
+            }
+            echo "</th>
               <td>
-                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/blog/save?id=1\">
+                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/menu/save?id=";
+            // line 90
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+            echo "\">
                   <i class=\"fa fa-edit\"></i> 编辑
                 </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/blog/info?id=1\">
-                  <i class=\"fa fa-check\"></i> 启用
-                </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/blog/info?id=1\">
+                ";
+            // line 93
+            if ((twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "status", array()) == 1)) {
+                // line 94
+                echo "                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/menu/off?id=";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+                echo "\">
                   <i class=\"fa fa-close\"></i> 禁用
                 </a>
-              </td>
+                ";
+            } else {
+                // line 97
+                echo "禁用
+                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/menu/on?id=";
+                // line 98
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["menu"], "id", array()), "html", null, true);
+                echo "\">
+                  <i class=\"fa fa-check\"></i> 启用
+                </a>
+                ";
+            }
+            // line 102
+            echo "              </td>
             </tr>
-            </tbody>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['menu'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 105
+        echo "            </tbody>
           </table>
         </div>
       </div>
@@ -145,7 +244,7 @@ class __TwigTemplate_99851bd76d026c7dec7176ab4e405a31c6ad3ef5288c1c3d0a8b950d264
 
     public function getDebugInfo()
     {
-        return array (  31 => 3,  28 => 2,  11 => 1,);
+        return array (  226 => 105,  218 => 102,  211 => 98,  208 => 97,  200 => 94,  198 => 93,  192 => 90,  183 => 88,  179 => 87,  175 => 86,  171 => 85,  167 => 84,  163 => 83,  160 => 82,  156 => 81,  137 => 64,  129 => 61,  122 => 57,  119 => 56,  111 => 53,  109 => 52,  103 => 49,  94 => 47,  90 => 46,  86 => 45,  82 => 44,  78 => 43,  75 => 42,  71 => 41,  31 => 3,  28 => 2,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -178,7 +277,7 @@ class __TwigTemplate_99851bd76d026c7dec7176ab4e405a31c6ad3ef5288c1c3d0a8b950d264
       </ul>
       <div class=\"tab-content\">
         <div class=\"tab-pane active\" id=\"tab_1\">
-          <table id=\"example1\" class=\"table table-bordered table-hover text-center \">
+          <table id=\"table1\" class=\"table table-bordered table-hover text-center \">
             <thead>
             <tr class=\"gradeX\">
               <th>ID</th>
@@ -186,35 +285,38 @@ class __TwigTemplate_99851bd76d026c7dec7176ab4e405a31c6ad3ef5288c1c3d0a8b950d264
               <th>URL</th>
               <th>上级菜单</th>
               <th>状态</th>
-              <th>创建时间</th>
               <th>操作</th>
             </tr>
             </thead>
             <tbody>
+            {% for menu in menus %}
             <tr align=\"center\">
-              <td>1</td>
-              <td>热门推荐</td>
-              <td>http://blog.wjlike.com</td>
-              <th> -- </th>
-              <th>启用</th>
-              <td>2017-04-25 10:25:13</td>
+              <td>{{ menu.id }}</td>
+              <td>{{ menu.name }}</td>
+              <td>{{ menu.uri }}</td>
+              <th>{{ menu.parent_name }}</th>
+              <th>{% if menu.status == 1 %}启用{% else %}禁用{% endif %}</th>
               <td>
-                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/blog/save?id=1\">
+                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/menu/save?id={{ menu.id }}\">
                   <i class=\"fa fa-edit\"></i> 编辑
                 </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/blog/info?id=1\">
-                  <i class=\"fa fa-check\"></i> 启用
-                </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/blog/info?id=1\">
+                {% if menu.status == 1 %}
+                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/menu/off?id={{ menu.id }}\">
                   <i class=\"fa fa-close\"></i> 禁用
                 </a>
+                {% else %}禁用
+                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/menu/on?id={{ menu.id }}\">
+                  <i class=\"fa fa-check\"></i> 启用
+                </a>
+                {% endif %}
               </td>
             </tr>
+            {% endfor %}
             </tbody>
           </table>
         </div>
         <div class=\"tab-pane\" id=\"tab_2\">
-          <table id=\"example1\" class=\"table table-bordered table-hover text-center \">
+          <table id=\"table2\" class=\"table table-bordered table-hover text-center \">
             <thead>
             <tr class=\"gradeX\">
               <th>ID</th>
@@ -223,31 +325,34 @@ class __TwigTemplate_99851bd76d026c7dec7176ab4e405a31c6ad3ef5288c1c3d0a8b950d264
               <th>URL</th>
               <th>上级菜单</th>
               <th>状态</th>
-              <th>创建时间</th>
               <th>操作</th>
             </tr>
             </thead>
             <tbody>
+            {% for menu in amenus %}
             <tr align=\"center\">
-              <td>1</td>
-              <td>热门推荐</td>
-              <td>fa-circle-o</td>
-              <td>http://blog.wjlike.com</td>
-              <th> -- </th>
-              <th>启用</th>
-              <td>2017-04-25 10:25:13</td>
+              <td>{{ menu.id }}</td>
+              <td>{{ menu.name }}</td>
+              <td>{{ menu.icon }}</td>
+              <td>{{ menu.uri }}</td>
+              <th>{{ menu.parent_name }}</th>
+              <th>{% if menu.status == 1 %}启用{% else %}禁用{% endif %}</th>
               <td>
-                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/blog/save?id=1\">
+                <a class=\"btn btn-xs btn-success btn-flat\" href=\"/admin/menu/save?id={{ menu.id }}\">
                   <i class=\"fa fa-edit\"></i> 编辑
                 </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/blog/info?id=1\">
-                  <i class=\"fa fa-check\"></i> 启用
-                </a>&nbsp;&nbsp;
-                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/blog/info?id=1\">
+                {% if menu.status == 1 %}
+                <a class=\"btn btn-xs bg-orange btn-flat\" href=\"/admin/menu/off?id={{ menu.id }}\">
                   <i class=\"fa fa-close\"></i> 禁用
                 </a>
+                {% else %}禁用
+                <a class=\"btn btn-xs bg-maroon btn-flat\" href=\"/admin/menu/on?id={{ menu.id }}\">
+                  <i class=\"fa fa-check\"></i> 启用
+                </a>
+                {% endif %}
               </td>
             </tr>
+            {% endfor %}
             </tbody>
           </table>
         </div>

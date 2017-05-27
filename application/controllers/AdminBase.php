@@ -40,7 +40,7 @@ abstract class AdminBaseController extends BaseController
 	private function getMenusAndRules($role_id)
 	{
 		$showMenus = [];
-		$menus = MenusModel::where('status', 1)->orderBy('weight', 'desc')->get()->toArray();
+		$menus = MenusModel::where('status', 1)->where('type', 0)->orderBy('weight', 'desc')->get()->toArray();
 		if($role_id > 1){
 			$actions = DB::table("role_action")
 				->leftJoin('actions', 'role_action.action_id', '=', 'actions.id')

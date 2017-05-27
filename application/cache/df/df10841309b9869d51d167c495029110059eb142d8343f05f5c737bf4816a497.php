@@ -40,8 +40,6 @@ class __TwigTemplate_a1459e7b66692801df91c4ad29a232d39fff864061e5986a67452d2272c
   <!-- Main content -->
   <section class=\"content\">
     <div class=\"box box-primary\">
-      <div class=\"box-header\">     
-      </div>
       <div class=\"box-body\">
         <div class=\"col-md-4\">
           <a class=\"btn btn-success btn-flat\" data-toggle=\"modal\" data-target=\"#myModal\">
@@ -180,8 +178,6 @@ class __TwigTemplate_a1459e7b66692801df91c4ad29a232d39fff864061e5986a67452d2272c
   <!-- Main content -->
   <section class=\"content\">
     <div class=\"box box-primary\">
-      <div class=\"box-header\">     
-      </div>
       <div class=\"box-body\">
         <div class=\"col-md-4\">
           <a class=\"btn btn-success btn-flat\" data-toggle=\"modal\" data-target=\"#myModal\">
